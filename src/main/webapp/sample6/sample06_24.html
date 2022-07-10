@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("li.third-item").siblings().css("background","red");
+$("li.third-item").siblings(".selected").css("font-size","30px");
+});
+</script>
+</head>
+<body>
+<ul>
+	<li class="selected">아이템1</li>
+	<li>아이템2</li>
+	<li class="third-item">아이템3</li>
+	<li>아이템4</li>
+	<li class="selected">아이템5</li>
+</ul>
+</body>
+</html>

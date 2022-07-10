@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+$("div:contains('John')").css("text-decoration","underline");
+	});
+</script>
+
+
+</head>
+<body>
+<form>
+<div>John Resig</div>
+<div>George Martin, john</div>
+<div>Malcom John Sinclair</div>
+<div>J.ohn </div>
+<div>J<span>Mr.John</span></div>
+</body>
+</html>

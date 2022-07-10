@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("ul.topnav>li").css("border", "3px double red");
+
+	});
+	console.log($("ul.topnav>li").length);
+</script>
+
+
+</head>
+<body>
+	<ul class="topnav">
+		<li>아이템1</li>
+		<li>아이템2
+			<ul>
+				<li>중첩된이름1</li>
+				<li>중첩된이름2</li>
+				<li>중첩된이름3</li>
+			</ul>
+		</li>
+		<li>아이템3</li>
+	</ul>
+
+</body>
+</html>

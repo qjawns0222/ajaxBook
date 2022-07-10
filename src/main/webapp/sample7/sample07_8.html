@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("p").on("click",function(){
+	$(this).toggleClass("highlight");
+});
+});
+</script>
+<style>
+.size{
+margin:8px;
+font-size:16px;
+}
+.selected{
+color:red;
+}
+.highlight{
+background:yellow;
+}
+</style>
+</head>
+<body>
+<p>홍길동</p>
+<p>이순신</p>
+<p>유관순</p>
+<p>권율</p>
+</body>
+</html>

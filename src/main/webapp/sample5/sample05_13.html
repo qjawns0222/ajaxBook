@@ -1,0 +1,28 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("a[href='http://www.naver.com']").css("font-size","30px");
+	$("a[href!='http://www.naver.com']").css("color","red");
+	});
+</script>
+
+
+</head>
+<body>
+	<a href="http://www.naver.com">one</a><br/>
+	<a href="http://www.naver.com" target="_blank">two</a><br/>
+	<a href="http://www.daum.com">three</a><br/>
+	<a href="http://www.daum.com" target="_blank">four</a><br/>
+	<a href="http://www.korea.com">five</a><br/>
+	<a href="http://www.korea.com" target="_blank">six</a><br/>
+
+</body>
+</html>

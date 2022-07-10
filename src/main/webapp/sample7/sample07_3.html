@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		var text=$("#source").val();
+		$("#target").val(text);
+	})
+});
+</script>
+</head>
+<body>
+
+입력:<input type="text" id="source"><br/>
+<button>복사</button><br>
+출력<input type="text" id="target">
+</body>
+</html>

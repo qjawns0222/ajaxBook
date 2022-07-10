@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var xhttp;
+	function createHttpRequest() {
+		xhttp = new XMLHttpRequest();
+	}
+	function mySend() {
+		createHttpRequest();
+		xhttp.onreadystatechange = callFunction;
+		xhttp.open("GET", "sample.xml", true);
+		xhttp.send(null);
+
+	}
+	function callFunction() {
+		if (xhttp.readyState == 4) {
+			if (xhttp.status = 200) {
+				var responseData = xhttp.responseXML;
+				var titles=responseData.getElementsByTagName("title");
+				var title=titles[0].firstChild.nodeValue;
+				var artists=responseData.getElementsByTagName("artist");
+				var artist=artists[2].firstChild.nodeValue
+				console.log(artists[1]);
+				document.getElementById("result").innerHTML = title+"\t"+artist;
+			}
+		}
+
+	}
+</script>
+</head>
+<body>
+XML파일 실습입니다.<br>
+<button onClick="mySend()">파일수신</button>
+<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("ul").find(".foo").css("background-color","red").end().find(".bar").css("background-color","green");
+});
+</script>
+</head>
+<body>
+<ul>
+<li class="foo">아이템1</li>
+<li>아이템 2</li>
+<li class="bar">아이템3</li>
+</ul>
+
+
+</body>
+</html>

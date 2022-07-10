@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	$("input[id*='man'][name$='man']").val("has man in it");
+	$("input[value |='en']").css("border","3px solid red");
+	});
+</script>
+
+
+</head>
+<body>
+	<input id="man-news" value="en" name="man-news">
+	<input value="kr" name="milk man">  
+	<input id="man-news" name="new-letterman">
+	<input name="newmilk" value="en-UK">
+
+
+
+</body>
+</html>

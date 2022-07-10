@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("div").find("span").css("font-size","30px");
+	$("div").children("span").css("background","red");
+});
+</script>
+</head>
+<body>
+<div><span>홍길동</span>,이순신</div>
+<div>유관순<p><span>강감찬</span></p></div>
+
+
+</body>
+</html>

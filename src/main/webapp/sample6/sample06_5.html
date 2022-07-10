@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("ul").click(function(event){
+		var target=$(event.target);
+		if(target.is("li")){
+			target.css("background-color","green");
+		var isStrong=target.is(function(){
+			return $("strong",this).length==1;
+		});
+		if(isStrong){
+			target.css("font-size","30px");
+		}
+		}
+	});
+});
+</script>
+</head>
+<body>
+<ul>
+<li>아이템1</li>
+<li>아이템2</li>
+<li >아이템3</li>
+<li>아이템<strong>4</strong></li>
+<li >아이템5</li>
+<li>아이템6</li>
+</ul>
+
+</body>
+</html>

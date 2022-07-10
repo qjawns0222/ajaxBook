@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DoM생성</title>
+</head>
+<body>
+<input onKeyUp="mySend(this)" type="text" id="search">
+<div id="result">
+</div>
+<script type="text/javascript">
+var xhttp;
+function createHttpRequest(){
+	xhttp=new XMLHttpRequest;
+}
+function mySend(check){
+	createHttpRequest();
+	xhttp.onreadystatechange=callFunction;
+	var req="suggest.jsp?search="+check.value;
+	xhttp.open("GET",req,true);
+	xhttp.send(null);
+}
+function callFunction(){
+	if(xhttp.readyState=4){
+		if(xhttp.status=200){
+			var responseData=xhttp.responseText;
+			var gu=document.querySelector("#result");
+			
+			gu.innerHTML=responseData;
+		}
+		
+	}
+	
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(":button").css("border","3px red solid")
+		$("#disable").click(function(){
+			$("input[type='text']:enabled").removeAttr("enabled");
+			$("input[type='text']:enabled").attr("disabled","disabled");
+			
+			
+		})
+			$("#enable").click(function(){
+			$("input[type='text']:disabled").removeAttr("disabled");
+			$("input[type='text']:disabled").attr("enabled","enabled");
+			
+			
+		})
+			$("form").submit(function(event){
+		event.preventDefault();
+			
+		})
+	});
+</script>
+
+
+</head>
+<body>
+<form>
+<fieldset>
+<input type="text" id="first"/>
+<input type="text" id="second" disabled="disabled"/>
+<input type="button" value="enable" id="enable"/>
+<button id="disable">disable</button>
+</fieldset>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+$("select").change(function(){
+	var data=$(":selected").text();
+	$("span").text(data);
+})
+	});
+</script>
+
+
+</head>
+<body>
+<form>
+<select name="phone">
+<option>010</option>
+<option selected="selected">011</option>
+<option>02</option>
+</select>
+</form>
+선택된값:<span></span>
+</body>
+</html>

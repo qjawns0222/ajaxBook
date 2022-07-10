@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DoM생성</title>
+</head>
+<body>
+<select onChange="mySend(this)" id="si">
+<option>시</option>
+<option value="서울">서울</option>
+<option value="경기">경기</option>
+<option value="제주">제주</option>
+</select>
+<select id="gu">
+<option>구/동</option>
+</select>
+<script type="text/javascript">
+var xhttp;
+function createHttpRequest(){
+	xhttp=new XMLHttpRequest;
+}
+function mySend(check){
+	createHttpRequest();
+	xhttp.onreadystatechange=callFunction;
+	var req="address.jsp?address="+check.value;
+	xhttp.open("GET",req,true);
+	xhttp.send(null);
+}
+function callFunction(){
+	if(xhttp.readyState=4){
+		if(xhttp.status=200){
+			var responseData=xhttp.responseText;
+			var gu=document.querySelector("#gu");
+			console.log(gu);
+			gu.innerHTML=responseData;
+		}
+		
+	}
+	
+}
+</script>
+
+</body>
+</html>

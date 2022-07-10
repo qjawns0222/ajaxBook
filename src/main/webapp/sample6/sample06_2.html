@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("li").filter(":even").css("background-color","green").end().filter(".orange,#apple").css("font-size","30px");
+});
+</script>
+</head>
+<body>
+<ul>
+<li>아이템1</li>
+<li>아이템2</li>
+<li class="orange">아이템3</li>
+<li>아이템4</li>
+<li id="apple">아이템5</li>
+<li>아이템6</li>
+</ul>
+
+</body>
+</html>

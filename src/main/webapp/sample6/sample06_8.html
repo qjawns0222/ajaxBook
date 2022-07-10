@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div{
+width:60px;
+height:60px;
+margin:10px;
+float:left;
+border:2px solid blue;
+}
+</style>
+<!-- 작동안됨 -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var arr=$("div").map(function(index,element){
+		
+		return $(this).text().toUpperCase();
+	});
+	for(var i=0;i<arr.length;i++){
+		console.log(arr[i]);
+	}
+});
+</script>
+</head>
+<body>
+<div>a</div>
+<div>b</div>
+<div>c</div>
+<div>d</div>
+</body>
+</html>
