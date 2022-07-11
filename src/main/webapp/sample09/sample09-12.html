@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+console.log("is -100 numeric?",jQuery.isNumeric("-100"));
+console.log("is 20 numeric?",jQuery.isNumeric(20));
+console.log("is 0xFE numeric?",jQuery.isNumeric(0xFE));
+console.log("is '0xFE' numeric?",jQuery.isNumeric('0xFE'));
+console.log("is '8e5' numeric?",jQuery.isNumeric('8e5'));
+console.log("is 3.14 numeric?",jQuery.isNumeric(3.14));
+console.log("is +10 numeric?",jQuery.isNumeric(+10));
+console.log("is 0234 numeric?",jQuery.isNumeric(0234));
+console.log("is '' numeric?",jQuery.isNumeric(""));
+console.log("is NaN numeric?",jQuery.isNumeric(NaN));
+console.log("is null numeric?",jQuery.isNumeric(null));
+console.log("is true numeric?",jQuery.isNumeric(true));
+console.log("is Infinity numeric?",jQuery.isNumeric(Infinity));
+console.log("is undefined numeric?",jQuery.isNumeric(undefined));
+});
+</script>
+</head>
+<body>
+is [] an Array?<b></b>
+</body>
+</html>

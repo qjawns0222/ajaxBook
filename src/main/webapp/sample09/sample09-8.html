@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var arr=[4,"홍길동",8,"이순신"];
+var $spans=$("span");
+$spans.eq(0).text(jQuery.inArray("홍길동",arr));
+$spans.eq(1).text(jQuery.inArray(4,arr));
+$spans.eq(2).text(jQuery.inArray("유관순",arr));
+
+});
+</script>
+</head>
+<body>
+<div>홍길동 위치값:<span></span></div>
+<div>4 위치값:<span></span></div>
+<div>유관순 위치값:<span></span></div>
+
+</body>
+</html>
