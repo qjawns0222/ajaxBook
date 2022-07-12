@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var lis=$("li").get();
+lis=lis.concat($("li").get());
+console.log("중복된 값 길이:"+lis.length);
+var lisl=jQuery.uniqueSort(lis);
+console.log("중복제거된 값 길이:"+lisl.length);
+});
+</script>
+</head>
+<body>
+<ul>-
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>E</li>
+</ul>
+</body>
+</html>

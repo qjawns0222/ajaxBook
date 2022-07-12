@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$("li").each(function(index,element){
+	console.log(index+":"+$(this).text());
+});
+
+
+});
+</script>
+</head>
+<body>
+<div></div>
+<ul>
+<li>홍길동</li>
+<li>이순신</li>
+<li>유관순</li>
+</ul>
+</body>
+</html>
